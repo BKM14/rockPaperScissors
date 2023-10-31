@@ -46,8 +46,15 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
+    let userWin = 0, computerWin = 0;
     playerSelection = prompt("Rock, Paper or Scissors?");
-    console.log(playerSelection);
+    computerSelection = getComputerChoice();
+    let result = playRound(playerSelection, computerSelection);
+    if (result == "win") {
+        userWin++;
+    } else if (result == "lose") {
+        computerWin++;
+    }
+    console.log(userWin, computerWin);
 }
-
 
