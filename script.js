@@ -46,15 +46,31 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    let userWin = 0, computerWin = 0;
-    playerSelection = prompt("Rock, Paper or Scissors?");
-    computerSelection = getComputerChoice();
-    let result = playRound(playerSelection, computerSelection);
-    if (result == "win") {
-        userWin++;
-    } else if (result == "lose") {
-        computerWin++;
+    let userWin = 0, computerWin = 0, draw = 0;
+    for (let i = 0; i < 5; i++) {
+        playerSelection = prompt("Rock, Paper or Scissors?");
+        computerSelection = getComputerChoice();
+        let result = playRound(playerSelection, computerSelection);
+        if (result == "win") {
+            userWin++;
+        } else if (result == "lose") {
+            computerWin++;
+        } else {
+            draw++;
+        }
     }
-    console.log(userWin, computerWin);
+    
+    console.log("Player score: " + userWin);
+    console.log("Computer score: " + computerWin);
+    console.log("Draws: " + draw);
+    if (userWin > computerWin) {
+        console.log("Player beats Computer!");
+    } else if (computerWin > userWin) {
+        console.log("Computer beats Player!");
+    } else {
+        console.log("Draw");
+    }
 }
+
+game();
 
