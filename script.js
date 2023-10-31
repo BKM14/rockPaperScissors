@@ -20,33 +20,32 @@ function playRound(playerSelection, computerSelection) {
         if (computerSelection == "rock") {
             return "draw";
         } else if (computerSelection == "scissors") {
-            return "You win! Rock beats Scissors";
+            return "win";
         } else if (computerSelection == "paper") {
-            return "You lose! Paper beats Rock"
+            return "lose"
         }
 
     } else if (playerSelection == "paper") {
         if (computerSelection == "rock") {
-            return "You win! Rock beats Scissors";
+            return "win";
         } else if (computerSelection == "scissors") {
-            return "You lose! Scissor beats Paper";
+            return "lose";
         } else if (computerSelection == "paper") {
             return "draw";
         }
 
     } else if (playerSelection == "scissors") {
         if (computerSelection == "rock") {
-            return "You lose! Rock beats Scissors";
+            return "lose";
         } else if (computerSelection == "scissors") {
             return "draw";
         } else if (computerSelection == "paper") {
-            return "You win! Scissor beats Paper";
+            return "win";
         }
     }
 }
 
-const playerSelection = "rOck";
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+    
+}
 
