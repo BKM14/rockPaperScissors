@@ -51,6 +51,9 @@ function game() {
         playerSelection = prompt("Rock, Paper or Scissors?");
         computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
+        console.log("Player choice: " + playerSelection);
+        console.log("Computer choice: " + computerSelection);
+        console.log(result);
         if (result == "win") {
             userWin++;
         } else if (result == "lose") {
@@ -58,8 +61,12 @@ function game() {
         } else {
             draw++;
         }
+        console.log("Player score: " + userWin);
+        console.log("Computer score: " + computerWin);
+        console.log("Draws: " + draw);
     }
     
+    console.log("Final Score")
     console.log("Player score: " + userWin);
     console.log("Computer score: " + computerWin);
     console.log("Draws: " + draw);
