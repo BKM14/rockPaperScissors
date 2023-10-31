@@ -46,6 +46,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    
+    playerSelection = prompt("Rock, Paper or Scissors?");
+    console.log(playerSelection);
 }
+
 
